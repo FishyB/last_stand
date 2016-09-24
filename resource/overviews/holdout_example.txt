@@ -1,0 +1,8 @@
+holdout_example
+{
+	material materials/overviews/holdout_example.vmat
+	pos_x -3576
+	pos_y 3328
+	scale 7.000
+}
+

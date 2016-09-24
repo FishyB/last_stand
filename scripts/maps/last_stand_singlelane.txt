@@ -1,0 +1,3210 @@
+"last_stand_singlelane"
+{
+	"PrepTimeBetweenRounds"			"20"
+	"ItemExpireTime"				"25"
+	"RestoreHPAfterRound"			"0"
+	"RestoreMPAfterRound"			"0"
+	"RewardForTowersStanding"		"1"
+	"TowerRewardAmount"				"5"
+	"TowerScalingRewardPerRound"	"1"
+	
+	//=================================================================================================================
+	// Loot Drops
+	//=================================================================================================================
+
+	"ItemDrops"
+	{
+		"HealingSalve1"
+		{
+			"Item"					"item_flask2"
+			"Chance"				"0.8"
+		}
+		"HealingSalve2"
+		{
+			"Item"					"item_greater_salve"
+			"Chance"				"0.36"
+		}
+		"Clarity2"
+		{
+			"Item"					"item_greater_clarity"
+			"Chance"				"0.6"
+		}
+		"Agility3"
+		{
+			"Item"					"item_script_of_agility"
+			"Chance"				"0.17"
+		}
+		"Agility6"
+		{
+			"Item"					"item_tome_of_agility"
+			"Chance"				"0.08"
+		}
+		"Intelligence3"
+		{
+			"Item"					"item_script_of_intelligence"
+			"Chance"				"0.16"
+		}
+		"Intelligence6"
+		{
+			"Item"					"item_tome_of_intelligence"
+			"Chance"				"0.07"
+		}
+		"Strength3"
+		{
+			"Item"					"item_script_of_strength"
+			"Chance"				"0.2"
+		}
+		"Strength6"
+		{
+			"Item"					"item_tome_of_strength"
+			"Chance"				"0.09"
+		}
+		
+	}
+	
+	//=================================================================================================================
+	//  Map Spawn Points
+	//=================================================================================================================
+
+	
+	"RandomSpawns"
+	{
+		"1"
+		{
+			"SpawnerName"			"spawner1"
+			"Waypoint"				"path_invader1_1"
+		}
+		"2"
+		{
+			"SpawnerName"			"spawner2"
+			"Waypoint"				"path_invader2_1"
+		}
+		"3"
+		{
+			"SpawnerName"			"spawner3"
+			"Waypoint"				"path_invader3_1"
+		}
+		"4"
+		{
+			"SpawnerName"			"spawner4"
+			"Waypoint"				"path_invader4_1"
+		}
+		
+		// Duplicating to reduce of alternate path chosen
+		"5"
+		{
+			"SpawnerName"			"spawner1"
+			"Waypoint"				"path_invader1_1"
+		}
+		"6"
+		{
+			"SpawnerName"			"spawner2"
+			"Waypoint"				"path_invader2_1"
+		}
+		"7"
+		{
+			"SpawnerName"			"spawner3"
+			"Waypoint"				"path_invader3_1"
+		}
+		"8"
+		{
+			"SpawnerName"			"spawner4"
+			"Waypoint"				"path_invader4_1"
+		}
+		
+		// Alternate path spawn
+		"9"
+		{
+			"SpawnerName"			"spawner3_alternate"
+			"Waypoint"				"path_invader3alt_1"
+		}
+	}
+
+	//=================================================================================================================
+	// Splitting Enemies
+	//=================================================================================================================
+
+	"LinkedXPEnemies"
+	{
+		// Key enemy spawns sub-value count of subkey enemies
+		// e.g. splitter_a spawns 3 splitter_b
+		"npc_dota_splitter_a"
+		{
+			"npc_dota_splitter_b"	"3"
+		}
+
+		"npc_dota_splitter_b"
+		{
+			"npc_dota_splitter_c"	"4"
+		}
+
+		"npc_dota_creature_boss_skeleton_king_1"
+		{
+			"npc_dota_creature_boss_skeleton_king_2"	"1"
+		}
+
+		"npc_dota_creature_boss_skeleton_king_2"
+		{
+			"npc_dota_creature_boss_skeleton_king_3"	"1"
+		}
+	}
+
+	// ROUND CONVENTIONS
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	// ROUND 1 = Introduction to 5 Round theme
+	// ROUND 2 = Some creature ablities thrown in
+	// Round 3 = Big HP Enemies
+	// ROUND 4 = Here's the Horde.
+	// Round 5 = Theme Ending, with some a few single big bosses?
+
+	// ========================================
+	// SECTION 1
+	// ========================================
+	// KOBOLDS, FRIGGEN PESKY KOBOLDS
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 1
+	//=================================================================================================================
+	
+	"Round1" // Kobolds
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Info1"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title1"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		// Stage 1 ================================================
+		// Throw in some basic units to get the folks engaged
+		
+		"UnitFodder_1a" 
+		{
+			"NPCName"				"npc_dota_creature_kobold_nubling"
+			"TotalUnitsToSpawn"		"64" 	
+			"UnitsPerSpawn"			"8" 	
+			"SpawnInterval"			"15" 	
+		}
+		
+		"UnitFodder_1b" 
+		{
+			"WaitForTime"			"30"
+			"NPCName"				"npc_dota_creature_kobold_nubling"
+			"TotalUnitsToSpawn"		"32"  	
+			"UnitsPerSpawn"			"8" 	
+			"SpawnInterval"			"15"	
+		}
+
+		
+		// Stage 2 ================================================
+		// Tougher units with a bunch of the earlier units
+		
+		"UnitFodderGrouped_2a" 
+		{
+			"WaitForUnit"			"UnitFodder_1a"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_kobold_nubling"
+			"TotalUnitsToSpawn"		"32"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"15"
+		}
+		
+		
+		"UnitHealer_2a"
+		{
+			"GroupWithUnit"			"UnitFodderGrouped_2a"
+			
+			"NPCName"				"npc_dota_creature_kobold_stablet"
+			"TotalUnitsToSpawn"		"32"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"15"
+		}
+
+	}
+	
+	//=================================================================================================================
+	// ROUND 2
+	//=================================================================================================================
+	
+	"Round2" // A Healing Hand
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Info2"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title2"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"500"
+		
+		// Stage 1 ================================================
+		"UnitFodder_1a" // Duration 80s - Continues with UnitFodderGrouped_2a & 3a to 120s total
+		{
+			"NPCName"				"npc_dota_creature_kobold_nubling"
+			"TotalUnitsToSpawn"		"60" 	//64
+			"UnitsPerSpawn"			"12" 	// 8
+			"SpawnInterval"			"15" 	//10
+		}
+		
+		"UnitRanged_1a" // Duration 60s + 30s
+		{
+			"WaitForUnit"			"UnitFodder_1a"
+			"GroupWithUnit"			"UnitFodder_1a"
+			"NPCName"				"npc_dota_creature_troll_healer"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"15"
+		}
+		
+
+		
+		// Stage 2 ================================================
+		"UnitFodderGrouped_2a" // Duration 20s
+		{
+			"WaitForUnit"			"UnitFodder_1a"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_kobold_nubling"
+			"TotalUnitsToSpawn"		"40"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"15"
+		}
+		
+		"UnitRangedGrouped_2b" // Duration 20s
+		{
+			"GroupWithUnit"			"UnitFodderGrouped_2a"
+			
+			"NPCName"				"npc_dota_creature_gnoll_assassin"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"15"
+		}
+		
+		"UnitHealer_2a"
+		{
+			"GroupWithUnit"			"UnitFodderGrouped_2a"
+			
+			"NPCName"				"npc_dota_creature_troll_healer"
+			"TotalUnitsToSpawn"		"4"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"15"
+		}
+		
+		
+		// Stage 3 ================================================
+		"UnitFodderGrouped_3a" 
+		{
+			"WaitForUnit"			"UnitFodderGrouped_2a"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_kobold_nubling"
+			"TotalUnitsToSpawn"		"40"
+			"UnitsPerSpawn"			"10"
+			"SpawnInterval"			"15"
+		}
+		
+		"UnitFodderGrouped_3b"
+		{
+			"WaitForTime"			"10"
+			"GroupWithUnit"			"UnitFodderGrouped_3a"
+			
+			"NPCName"				"npc_dota_creature_kobold_stablet"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"15"
+		}
+		
+		"UnitRangedGrouped_3a" 
+		{
+			"WaitForTime"			"10"
+			"GroupWithUnit"			"UnitFodderGrouped_3a"
+			
+			"NPCName"				"npc_dota_creature_gnoll_assassin"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"15"
+		}
+		
+		"UnitFodderGrouped_3b" 
+		{
+			"WaitForTime"			"10"
+			"GroupWithUnit"			"UnitFodderGrouped_3a"
+			
+			"NPCName"				"npc_dota_creature_troll_healer"
+			"TotalUnitsToSpawn"		"4"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"15"
+		}
+		
+	}
+
+	//=================================================================================================================
+	// ROUND 3
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round3" // Kobolds
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Info3"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title3"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"600"
+		
+		// Stage 1 ================================================
+		
+
+		"UnitFodder_1a" 
+		{
+			"NPCName"				"npc_dota_creature_kobold_beefy"
+			"TotalUnitsToSpawn"		"24" 	
+			"UnitsPerSpawn"			"6" 	
+			"SpawnInterval"			"30" 	
+		}
+		
+		"UnitFodder_1b" 
+		{
+			"GroupWithUnit"			"UnitFodder_1a"
+			"NPCName"				"npc_dota_creature_kobold_taskmaster"
+			"TotalUnitsToSpawn"		"4"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"30"	
+		}
+
+		"UnitFodderGrouped_3b" 
+		{
+			"GroupWithUnit"			"UnitFodder_1a"
+			
+			"NPCName"				"npc_dota_creature_troll_healer"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"30"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 4
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	"Round4" // Kobold Horde
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Info4"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title4"
+		"MaxGold"					"600"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"700"
+		
+		// Stage 1 ================================================
+		
+		"UnitFodder_1a"
+		{
+			
+			"NPCName"				"npc_dota_creature_kobold_stablet"
+			"TotalUnitsToSpawn"		"64"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"30"
+		}
+
+		"UnitFodder_1b" 
+		{
+			"GroupWithUnit"			"UnitFodder_1a"
+
+			"NPCName"				"npc_dota_creature_kobold_reg"
+			"TotalUnitsToSpawn"		"128" 	
+			"UnitsPerSpawn"			"16" 	
+			"SpawnInterval"			"30" 	
+		}
+		
+		"UnitFodder_1c" 
+		{
+			"GroupWithUnit"			"UnitFodder_1a"
+			"NPCName"				"npc_dota_creature_kobold_beefy"
+			"TotalUnitsToSpawn"		"16"  	
+			"UnitsPerSpawn"			"2" 	
+			"SpawnInterval"			"30"	
+		}
+
+		"UnitFodderGrouped_3b" 
+		{
+			"GroupWithUnit"			"UnitFodder_1a"
+			
+			"NPCName"				"npc_dota_creature_troll_healer"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"30"
+		}
+	}
+	
+	//=================================================================================================================
+	//=================================================================================================================
+	// ROUND 5 - BOSS
+	//=================================================================================================================
+	//=================================================================================================================
+
+	"Round5" // Kobolds
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Info5"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title5"
+		"MaxGold"					"300"
+		"BagCount"					"10"
+		"BagVariance"				"10"
+		"FixedXP"					"800"
+		
+		// Stage 1 ================================================
+		
+
+		"UnitBossFodder_1a" 
+		{
+
+			"NPCName"				"npc_dota_creature_kobold_kguard"
+			"TotalUnitsToSpawn"		"16" 	
+			"UnitsPerSpawn"			"4" 	
+			"SpawnInterval"			"25" 	
+		}
+		
+		"UnitKings_1a" 
+		{
+			"GroupWithUnit"			"UnitBossFodder_1a"
+			"NPCName"				"npc_dota_creature_kobold_king"
+			"TotalUnitsToSpawn"		"4"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"25"	
+		}
+
+	}
+
+	// ========================================
+	// SECTION 2
+	// ========================================
+	// 2 SPOOKY 4 ME
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 6 - SPOOKY INTRO
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round6" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info1"
+		"round_title"				"#DOTA_Holdout_Round_Spooky_Title1"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"900"
+	
+		"UnitSkellyton_1a" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"80"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"1"	
+		}
+
+		"UnitSkellyton_1b" 
+		{	
+			"WaitForTime"			"20"
+
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"60"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"1"	
+		}
+
+		"UnitSkellyton_1c" 
+		{
+			"WaitForTime"			"40"
+
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"40"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"1"	
+		}
+
+		"UnitSkellyton_1d" 
+		{
+			"WaitForTime"			"60"
+
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"20"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"1"	
+		}
+
+
+
+	}
+
+	//=================================================================================================================
+	// ROUND 7 - Ghosties
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round7" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info2"
+		"round_title"				"#DOTA_Holdout_Round_Spooky_Title2"
+		"MaxGold"					"300"
+		"BagCount"					"10"
+		"BagVariance"				"10"
+		"FixedXP"					"1000"
+
+	"UnitGhostie_1a" 
+		{
+			"NPCName"				"npc_creature_ghost_ranged"
+			"TotalUnitsToSpawn"		"15"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"
+		}
+
+	"UnitGhostie_2a" 
+		{
+			"GroupWithUnit"			"UnitGhostie_1a"
+
+			"NPCName"				"npc_creature_ghost_healthy"
+			"TotalUnitsToSpawn"		"15"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"		
+		}
+	"UnitGhostie_2b" 
+		{
+			"GroupWithUnit"			"UnitGhostie_1a"
+
+			"NPCName"				"npc_creature_ghost_frosty"
+			"TotalUnitsToSpawn"		"15"  	
+			"UnitsPerSpawn"			"1" 
+			"SpawnInterval"			"10"			
+		}
+	"UnitGhostie2c" 
+		{
+			"GroupWithUnit"			"UnitGhostie_1a"
+
+			"NPCName"				"npc_creature_ghost_angry"
+			"TotalUnitsToSpawn"		"15"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+
+	//=================================================================================================================
+	// ROUND 8
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+
+	"Round8" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info3"
+		"round_title"				"#DOTA_Holdout_Round_Spooky_Title3"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"1100"
+		
+		"UnitSkellyton_1a" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"48"  	
+			"UnitsPerSpawn"			"4" 	
+			"SpawnInterval"			"10"	
+		}
+
+		"UnitFodder_1a" 
+		{
+			
+
+			"NPCName"				"npc_dota_creature_dark_troll_warlord"
+			"TotalUnitsToSpawn"		"36"  	
+			"UnitsPerSpawn"			"6" 	
+			"SpawnInterval"			"20"	
+		}
+
+		"UnitFodder_2a" 
+		{
+			"GroupWithUnit"			"UnitFodder_1a"
+
+			"NPCName"				"npc_dota_creature_punkna"
+			"TotalUnitsToSpawn"		"6"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"20"	
+		}
+
+	}
+
+	
+	//=================================================================================================================
+	// ROUND 9 - SPOOKY HORDE
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	"Round9" // TEMP
+{
+		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info4"
+		"round_title"				"#DOTA_Holdout_Round_Spooky_Title4"
+		"MaxGold"					"300"
+		"BagCount"					"40"
+		"BagVariance"				"10"
+		"FixedXP"					"1300"
+		
+		// Stage 1 ================================================
+		"UnitZombie_1a"
+		{
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"18"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"8"
+		}
+		
+		"UnitZombieExploding"
+		{
+			"GroupWithUnit"			"UnitZombie_1a"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie_exploding"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitZombie_1b"
+		{
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"18"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"8"
+		}
+		
+		"UnitZombieExploding"
+		{
+			"GroupWithUnit"			"UnitZombie_1b"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie_exploding"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		// Stage 2 ================================================
+		"UnitZombie_2a"
+		{
+			"WaitForUnit"			"UnitZombie_1a"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"24"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"8"
+		}
+		
+		"UnitZombieCorpseLord_2a"
+		{
+			"GroupWithUnit"			"UnitZombie_2a"
+			
+			"NPCName"				"npc_dota_creature_corpselord"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitZombieExploding_2a"
+		{
+			"GroupWithUnit"			"UnitZombie_2a"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie_exploding"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		// Stage 3 ================================================
+
+		"UnitZombie_3a"
+		{
+			"WaitForUnit"			"UnitZombie_2a"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"24"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"6"
+		}
+		
+		"UnitZombie_3b"
+		{
+			"WaitForUnit"			"UnitZombie_2a"			
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"24"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"6"
+		}
+		
+		// Stage 5 ================================================
+		"UnitZombie_5a"
+		{
+			"WaitForUnit"			"UnitZombie_3a"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"3"
+			//"SpawnInterval"			"25"
+			
+			"SpawnerName"			"spawner1"
+			"Waypoint"				"path_invader1_1"
+		}
+		
+		"UnitZombieCorpseLord_5a"
+		{
+			"GroupWithUnit"			"UnitZombie_5a"
+			
+			"NPCName"				"npc_dota_creature_corpselord"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			
+			"SpawnerName"			"spawner1"
+			"Waypoint"				"path_invader1_1"
+		}
+		
+		"UnitZombie_5b"
+		{
+			"WaitForUnit"			"UnitZombie_3a"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"3"
+			
+			"SpawnerName"			"spawner2"
+			"Waypoint"				"path_invader2_1"
+		}
+		
+		"UnitZombieCorpseLord_5b"
+		{
+			"GroupWithUnit"			"UnitZombie_5b"
+			
+			"NPCName"				"npc_dota_creature_corpselord"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			
+			"SpawnerName"			"spawner2"
+			"Waypoint"				"path_invader2_1"
+		}
+		
+		"UnitZombie_5c"
+		{
+			"WaitForUnit"			"UnitZombie_3a"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"3"
+			
+			"SpawnerName"			"spawner3"
+			"Waypoint"				"path_invader3_1"
+		}
+		
+		"UnitZombieCorpseLord_5c"
+		{
+			"GroupWithUnit"			"UnitZombie_5c"
+			
+			"NPCName"				"npc_dota_creature_corpselord"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			
+			"SpawnerName"			"spawner3"
+			"Waypoint"				"path_invader3_1"
+		}
+		
+		"UnitZombie_5d"
+		{
+			"WaitForUnit"			"UnitZombie_3a"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"3"
+			
+			"SpawnerName"			"spawner4"
+			"Waypoint"				"path_invader4_1"
+		}
+		
+		"UnitZombieCorpseLord_5d"
+		{
+			"GroupWithUnit"			"UnitZombie_5d"
+			
+			"NPCName"				"npc_dota_creature_corpselord"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			
+			"SpawnerName"			"spawner4"
+			"Waypoint"				"path_invader4_1"
+		}
+		
+		// Stage Finale ================================================
+		"UnitZombieSupport_Finale"
+		{
+			"WaitForUnit"			"UnitZombie_5a"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"20"
+			"UnitsPerSpawn"			"10"
+			"SpawnInterval"			"8"
+		}
+		
+		"UnitZombieCorpseLord_Finale"
+		{
+			"WaitForUnit"			"UnitZombie_5a"
+			"GroupWithUnit"			"UnitZombieSupport_Finale"
+			
+			"NPCName"				"npc_dota_creature_corpselord"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitZombieSupport_Finale_b"
+		{
+			"WaitForUnit"			"UnitZombie_5a"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_creature_basic_zombie"
+			"TotalUnitsToSpawn"		"20"
+			"UnitsPerSpawn"			"10"
+			"SpawnInterval"			"8"
+		}
+		
+		"UnitZombieCorpseLord_Finale_b"
+		{
+			"WaitForUnit"			"UnitZombie_5a"
+			"GroupWithUnit"			"UnitZombieSupport_Finale_b"
+			
+			"NPCName"				"npc_dota_creature_corpselord"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+	}
+
+	
+	//=================================================================================================================
+	//=================================================================================================================
+	// ROUND 10 - SPOOKY BOSSES
+	//=================================================================================================================
+	//=================================================================================================================
+	
+	"Round10" // First "BOSS" Corpselords, Volatile Zombies
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info5"
+		"round_title"				"#DOTA_Holdout_Round_Spooky_Title5"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"0"
+		"FixedXP"					"1300"
+		
+		"UnitFriendlets_1a" 
+		{
+			"NPCName"				"npc_dota_creature_shadowfriendlets"
+			"TotalUnitsToSpawn"		"40"  	
+			"UnitsPerSpawn"			"4" 	
+			"SpawnInterval"			"15"	
+		}
+
+			"UnitFriendlets_1b" 
+		{
+			"NPCName"				"npc_dota_creature_shadowfriendlets"
+			"TotalUnitsToSpawn"		"40"  	
+			"UnitsPerSpawn"			"4" 	
+			"SpawnInterval"			"15"	
+		}
+
+		"UnitSkellyton_1a" 
+		{
+			"NPCName"				"npc_dota_creature_shadowfriend"
+			"TotalUnitsToSpawn"		"2"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"60"	
+		}
+
+		"UnitSkellyton_1b" 
+		{
+			"GroupWithUnit"			"UnitSkellyton_1a"
+
+			"NPCName"				"npc_dota_creature_shadowfriendlets"
+			"TotalUnitsToSpawn"		"16"  	
+			"UnitsPerSpawn"			"8" 	
+			"SpawnInterval"			"60"	
+		}
+
+		"UnitSkellyton_2a" 
+		{
+			"NPCName"				"npc_dota_creature_shadowfriend"
+			"TotalUnitsToSpawn"		"2"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"80"	
+		}
+
+		"UnitSkellyton_2b" 
+		{
+			"GroupWithUnit"			"UnitSkellyton_2a"
+
+			"NPCName"				"npc_dota_creature_shadowfriendlets"
+			"TotalUnitsToSpawn"		"16"  	
+			"UnitsPerSpawn"			"8" 	
+			"SpawnInterval"			"80"	
+		}
+
+	}
+
+
+	// ========================================
+	// SECTION 3 (11 - 15)
+	// ========================================
+	// THIS ROUND IS OGRE
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 11
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round11" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_ogre_melee"
+			"TotalUnitsToSpawn"		"32"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"20"
+		}
+		
+		"UnitRanged_1"
+		{
+			"GroupWithUnit"			"UnitMelee_1"
+			
+			"NPCName"				"npc_dota_creature_ogre_magi"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 12
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round12" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_ogre_melee"
+			"TotalUnitsToSpawn"		"32"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"20"
+		}
+		
+		"UnitRanged_1"
+		{
+			"GroupWithUnit"			"UnitMelee_1"
+			
+			"NPCName"				"npc_dota_creature_ogre_magi"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 13
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round13" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_ogre_melee"
+			"TotalUnitsToSpawn"		"32"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"20"
+		}
+		
+		"UnitRanged_1"
+		{
+			"GroupWithUnit"			"UnitMelee_1"
+			
+			"NPCName"				"npc_dota_creature_ogre_magi"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 14
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round14" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_ogre_melee"
+			"TotalUnitsToSpawn"		"32"
+			"UnitsPerSpawn"			"8"
+			"SpawnInterval"			"20"
+		}
+		
+		"UnitRanged_1"
+		{
+			"GroupWithUnit"			"UnitMelee_1"
+			
+			"NPCName"				"npc_dota_creature_ogre_magi"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+		}
+	}
+
+	//=================================================================================================================
+	// ROUND 15 - OGRE BOSS
+	//=================================================================================================================
+	
+	"Round15" // Ogres
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Ogre_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Ogre_Title"
+		"MaxGold"					"600" //600g from gold fountain ability
+		"BagCount"					"20"
+		"BagVariance"				"40"
+		"FixedXP"					"500"
+		
+		// Stage 1 ================================================
+		"UnitMelee_1" // Duration 20s
+		{
+			"NPCName"				"npc_dota_creature_ogre_melee"
+			"TotalUnitsToSpawn"		"4"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"20"
+		}
+		
+		"UnitRanged_1"
+		{
+			"GroupWithUnit"			"UnitMelee_1"
+			
+			"NPCName"				"npc_dota_creature_ogre_magi"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"2"
+		}
+		
+		// Stage 2 ================================================
+		"UnitMelee_2" // Duration 120s + 10s WaitForTime
+		{
+			"WaitForUnit"			"UnitMelee_1"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_ogre_melee"
+			"TotalUnitsToSpawn"		"8"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"40"
+		}
+		
+		"UnitRanged_2"
+		{
+			"GroupWithUnit"			"UnitMelee_2"
+			
+			"NPCName"				"npc_dota_creature_ogre_magi"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitOgreTank_2"
+		{
+			"GroupWithUnit"			"UnitMelee_2"
+			
+			"NPCName"				"npc_dota_creature_ogre_tank"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		// Stage 2 Concurrent =====================================
+		"UnitMelee_2b" // Duration 120s + 10s
+		{
+			"WaitForUnit"			"UnitMelee_1"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_ogre_melee"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"20"
+		}
+		
+		"UnitRanged_2b"
+		{
+			"GroupWithUnit"			"UnitMelee_2b"
+			
+			"NPCName"				"npc_dota_creature_ogre_magi"
+			"TotalUnitsToSpawn"		"8"
+			"UnitsPerSpawn"			"2"
+		}
+		
+		"UnitMelee_2c" // Duration 100s + 30s
+		{
+			"WaitForUnit"			"UnitMelee_1"
+			"WaitForTime"			"30"
+			
+			"NPCName"				"npc_dota_creature_ogre_melee"
+			"TotalUnitsToSpawn"		"16"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"20"
+		}
+		
+		"UnitRanged_2b"
+		{
+			"GroupWithUnit"			"UnitMelee_2c"
+			
+			"NPCName"				"npc_dota_creature_ogre_magi"
+			"TotalUnitsToSpawn"		"8"
+			"UnitsPerSpawn"			"2"
+		}
+	}
+
+	// ========================================
+	// SECTION 4 (16 -> 20)
+	// ========================================
+	// FISHY BUSNESS
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 16
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round16" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitJumper_1"
+		{
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"12"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"16"
+		}
+		
+		"UnitStun_1a"
+		{
+			"GroupWithUnit"			"UnitJumper_1"
+			
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+
+
+
+	}
+
+	//=================================================================================================================
+	// ROUND 17
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round17" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitJumper_1"
+		{
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"12"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"16"
+		}
+		
+		"UnitStun_1a"
+		{
+			"GroupWithUnit"			"UnitJumper_1"
+			
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 18
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round18" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitJumper_1"
+		{
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"12"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"16"
+		}
+		
+		"UnitStun_1a"
+		{
+			"GroupWithUnit"			"UnitJumper_1"
+			
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 19
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round19" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitJumper_1"
+		{
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"12"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"16"
+		}
+		
+		"UnitStun_1a"
+		{
+			"GroupWithUnit"			"UnitJumper_1"
+			
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 20 - BOSS FISH
+	//=================================================================================================================
+	
+	"Round20" // Slar*
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Slithereen_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Slithereen_Title"
+		"MaxGold"					"500"
+		"BagCount"					"40"
+		"BagVariance"				"50"
+		"FixedXP"					"700"
+
+		// Stage 1 ================================================
+		"UnitJumper_1"
+		{
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"12"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"16"
+		}
+		
+		"UnitStun_1a"
+		{
+			"GroupWithUnit"			"UnitJumper_1"
+			
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitJumper_1b"
+		{
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"12"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"16"
+		}
+		
+		"UnitStun_1b"
+		{
+			"GroupWithUnit"			"UnitJumper_1b"
+			
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitJumper_1c"
+		{
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"12"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"16"
+		}
+		
+		"UnitStun_1c"
+		{
+			"GroupWithUnit"			"UnitJumper_1c"
+			
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitStun_UnGrouped_1"
+		{
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"16"
+		}
+
+		// Stage 2 ================================================
+		"UnitJumper_2a"
+		{
+			"WaitForUnit"			"UnitJumper_1"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"3"
+			"SpawnInterval"			"12"
+			
+			"SpawnerName"			"spawner1"
+			"Waypoint"				"path_invader1_1"
+		}
+		
+		"UnitJumper_2b"
+		{
+			"WaitForUnit"			"UnitJumper_1"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"3"
+			"SpawnInterval"			"12"
+			
+			"SpawnerName"			"spawner2"
+			"Waypoint"				"path_invader2_1"
+		}
+		
+		"UnitJumper_2c"
+		{
+			"WaitForUnit"			"UnitJumper_1"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"3"
+			"SpawnInterval"			"12"
+			
+			"SpawnerName"			"spawner3"
+			"Waypoint"				"path_invader3_1"
+		}
+		
+		"UnitJumper_2d"
+		{
+			"WaitForUnit"			"UnitJumper_1"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"3"
+			"SpawnInterval"			"12"
+			
+			"SpawnerName"			"spawner4"
+			"Waypoint"				"path_invader4_1"
+		}
+		
+		"UnitStun_UnGrouped_2"
+		{
+			"WaitForUnit"			"UnitJumper_1"
+			"WaitForTime"			"20"
+		
+			"NPCName"				"npc_dota_creature_slithereen"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"12"
+		}
+	}
+
+	// ========================================
+	// SECTION 5 (21 -> 25)
+	// ========================================
+	// BAD THINGS COME IN TREES
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 21
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round21" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}	
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 22
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round22" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}	
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 23
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round23" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}	
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 24
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round24" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}	
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 25 - BOSS
+	//=================================================================================================================
+
+	"Round25" // Trees
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Trees_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Trees_Title"
+		"MaxGold"					"600" //2000g from gold fountain ability (king_treant)
+		"BagCount"					"15"
+		"BagVariance"				"50"
+		"FixedXP"					"750"
+
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}	
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}	
+
+		"Unit3"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}	
+		"Unit4"
+		{
+			"NPCName"				"npc_dota_creature_forest_prophet"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"28"
+		}	
+		"Unit5"
+		{
+			"NPCName"				"npc_dota_creature_king_treant"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"20"
+		}	
+	}
+
+	// ========================================
+	// SECTION 5 (26 -> 30)
+	// ========================================
+	// A WHOLE BUNCH OF NOPES (Spides etc.)
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 26
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round26" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		// Stage 1 ================================================
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_broodking"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"DontGiveGoal"    		"1"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 27
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round27" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		// Stage 1 ================================================
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_broodking"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"DontGiveGoal"    		"1"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 28
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round28" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		// Stage 1 ================================================
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_broodking"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"DontGiveGoal"    		"1"
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 29
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round29" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		// Stage 1 ================================================
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_broodking"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"DontGiveGoal"    		"1"
+		}
+	}
+
+	//=================================================================================================================
+	// ROUND 30
+	//=================================================================================================================
+	
+	"Round30" // Broodqueen
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Broodking_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Broodking_Title"
+		"MaxGold"					"0" // 8300 from gold fountain ability
+		"BagCount"					"0"
+		"BagVariance"				"0"
+		"FixedXP"					"250"
+
+		// Stage 1 ================================================
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_broodking"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"DontGiveGoal"    		"1"
+		}
+	}
+
+	// ========================================
+	// SECTION 6 (31 -> 35)
+	// ========================================
+	// FIRE MANS
+	// ========================================
+	
+	//=================================================================================================================
+	// ROUND 31
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round31" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit3"
+		{
+			"NPCName"				"npc_dota_creature_mini_roshan"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"18"
+		}
+		"Unit5"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit3"
+		}
+
+		"Unit6"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"7"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 32
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round32" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit3"
+		{
+			"NPCName"				"npc_dota_creature_mini_roshan"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"18"
+		}
+		"Unit5"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit3"
+		}
+
+		"Unit6"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"7"
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 33
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round33" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit3"
+		{
+			"NPCName"				"npc_dota_creature_mini_roshan"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"18"
+		}
+		"Unit5"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit3"
+		}
+
+		"Unit6"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"7"
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 34
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round34" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit3"
+		{
+			"NPCName"				"npc_dota_creature_mini_roshan"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"18"
+		}
+		"Unit5"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit3"
+		}
+
+		"Unit6"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"7"
+		}
+	}
+
+	//=================================================================================================================
+	// ROUND 35
+	//=================================================================================================================
+	
+	"Round35" // Roshan, Leshrac
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Roshan_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Roshan_Title"
+		"MaxGold"					"500" //4500 from gold bag fountain ability
+		"BagCount"					"12"
+		"BagVariance"				"150"
+		"FixedXP"					"800"
+
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_mini_roshan"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"18"
+		}
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_mini_roshan"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"18"
+		}
+		"Unit3"
+		{
+			"NPCName"				"npc_dota_creature_mini_roshan"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"18"
+		}
+		"Unit5"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit1"
+		}
+		"Unit6"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit2"
+		}
+		"Unit7"
+		{
+			"NPCName"				"npc_dota_creature_tormented_soul"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit3"
+		}
+	}
+
+	// ========================================
+	// SECTION 7 (36 -> 40)
+	// ========================================
+	// BEST FUN ON FOUR LEGS (BEARS & BEASTS)
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 36
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round36" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"18"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"12"
+		}
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit1"
+		}	
+
+	}
+
+	//=================================================================================================================
+	// ROUND 37
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round37" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"18"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"12"
+		}
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit1"
+		}	
+
+
+	}
+
+	//=================================================================================================================
+	// ROUND 38
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round38" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"18"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"12"
+		}
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit1"
+		}	
+
+	}
+	
+	//=================================================================================================================
+	// ROUND 39
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round39" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"18"
+			"UnitsPerSpawn"			"6"
+			"SpawnInterval"			"12"
+		}
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit1"
+		}	
+
+	}
+	
+	//=================================================================================================================
+	// ROUND 40
+	//=================================================================================================================
+	
+	"Round40" // Bears!
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_BearForceOne_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_BearForceOne_Title"
+		"MaxGold"					"1100"
+		"BagCount"					"45"
+		"BagVariance"				"100"
+		"FixedXP"					"1200"
+
+		// Part 1
+		"Unit1"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"9"
+			"UnitsPerSpawn"			"3"
+			"SpawnInterval"			"12"
+		}
+		"Unit2"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"GroupWithUnit"			"Unit1"
+		}	
+		"Unit3"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"9"
+			"UnitsPerSpawn"			"3"
+			"SpawnInterval"			"12"
+		}
+		"Unit4"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit3"
+		}	
+		
+		// Part 2
+		"Unit5"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"4"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"12"
+			"WaitForUnit"			"Unit1"
+		}
+		"Unit6"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"GroupWithUnit"			"Unit5"
+		}
+		"Unit7"
+		{
+			"NPCName"				"npc_dota_creature_bear_chieftain"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"GroupWithUnit"			"Unit5"
+		}
+		"Unit8"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"4"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"12"
+			"WaitForUnit"			"Unit1"
+		}
+		"Unit9"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"4"
+			"UnitsPerSpawn"			"2"
+			"GroupWithUnit"			"Unit8"
+		}
+		"Unit10"
+		{
+			"NPCName"				"npc_dota_creature_bear_chieftain"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"GroupWithUnit"			"Unit8"
+		}
+		
+		"UnitBigBear_2"
+		{	
+			"WaitForUnit"			"Unit1"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_big_bear"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+		}
+
+		// Part 3
+		"Unit11"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"12"
+			"WaitForUnit"			"Unit5"
+		}	
+		"Unit12"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"GroupWithUnit"			"Unit11"
+		}
+		"Unit13"
+		{
+			"NPCName"				"npc_dota_creature_bear_chieftain"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"GroupWithUnit"			"Unit11"
+		}	
+		"UnitBigBear_3"
+		{	
+			"WaitForUnit"			"Unit5"
+			
+			"NPCName"				"npc_dota_creature_big_bear"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+		}
+		"Unit15"
+		{
+			"NPCName"				"npc_dota_creature_small_spirit_bear"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"12"
+			"WaitForUnit"			"Unit5"
+		}	
+		"Unit16"
+		{
+			"NPCName"				"npc_dota_creature_large_spirit_bear"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"GroupWithUnit"			"Unit15"
+		}
+	}
+
+	// ========================================
+	// SECTION 8 (41 -> 45)
+	// ========================================
+	// STINKY FAT FUCKS. HOOKS!
+	// ========================================
+	
+	//=================================================================================================================
+	// ROUND 41
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round41" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 42
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round42" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 43
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round43" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 44
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round44" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+
+	//=================================================================================================================
+	// ROUND 45
+	//=================================================================================================================
+	
+	
+	"Round45" // Puuuuuuuuudge
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Pudge_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Pudge_Title"
+		"MaxGold"					"500" // 10500 in gold bag fountain
+		"BagCount"					"0"
+		"BagVariance"				"0"
+		"FixedXP"					"300"
+
+		// Stage 1 ================================================
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_boss_pudge"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"DontGiveGoal"    		"1"
+		}
+		"UnitMelee_2"
+		{
+			"NPCName"				"npc_dota_creature_boss_pudge"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			"DontGiveGoal"    		"1"
+		}
+	}
+
+	// ========================================
+	// SECTION 9 (46 -> 50)
+	// ========================================
+	// 2 KEEN 2 FURIOUS (TECH)
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 46
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round46" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 47
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round47" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 48
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round48" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 49
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round49" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 50
+	//=================================================================================================================
+	
+	"Round50" // Gyrocopter
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Gyrocopter_Quest_Title"
+		"round_name"				"#DOTA_Holdout_Round_Gyrocopter"
+		"MaxGold"					"1000"
+		"BagCount"					"40"
+		"BagVariance"				"20"
+		"FixedXP"					"1000"
+
+		// Stage 1 ================================================
+		"UnitMissile_1"
+		{
+			"NPCName"				"npc_dota_creature_missile_launcher"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"15"
+			"DontGiveGoal"			"1"
+		}
+
+		"UnitTank_1"
+		{
+			"NPCName"				"npc_dota_creature_rattletrap"
+			"TotalUnitsToSpawn"		"5"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"8"
+			"DontGiveGoal"			"1"
+		}
+		
+		"UnitTank_2"
+		{
+			"NPCName"				"npc_dota_creature_rattletrap"
+			"TotalUnitsToSpawn"		"5"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"8"
+			"DontGiveGoal"			"1"
+		}
+		
+		// Stage 2 ================================================
+		"UnitMissile_2a"
+		{
+			"WaitForUnit"			"UnitMissile_1"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_missile_launcher"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			//"SpawnInterval"			"20"
+			
+			"SpawnerName"			"spawner1"
+			"DontGiveGoal"			"1"
+		}
+		
+		"UnitMissile_2b"
+		{
+			"WaitForUnit"			"UnitMissile_1"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_missile_launcher"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			//"SpawnInterval"			"20"
+			
+			"SpawnerName"			"spawner2"
+			"DontGiveGoal"			"1"
+		}
+		
+		"UnitMissile_2c"
+		{
+			"WaitForUnit"			"UnitMissile_1"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_missile_launcher"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			//"SpawnInterval"			"20"
+			
+			"SpawnerName"			"spawner3"
+			"DontGiveGoal"			"1"
+		}
+		
+		"UnitMissile_2d"
+		{
+			"WaitForUnit"			"UnitMissile_1"
+			"WaitForTime"			"10"
+			
+			"NPCName"				"npc_dota_creature_missile_launcher"
+			"TotalUnitsToSpawn"		"1"
+			"UnitsPerSpawn"			"1"
+			//"SpawnInterval"			"20"
+			
+			"SpawnerName"			"spawner4"
+			"DontGiveGoal"			"1"
+		}
+	}
+
+	// ========================================
+	// SECTION 10 (51 -> 55)
+	// ========================================
+	// FROZE UR ASSES
+	// ========================================
+	
+	//=================================================================================================================
+	// ROUND 51
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round51" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 52
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round52" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 53
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round53" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 54
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round54" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+
+	//=================================================================================================================
+	// ROUND 55 BOSS
+	//=================================================================================================================
+	
+	"Round55" // AA, MiniLich, Fodder
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_StayFrosty_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_StayFrosty_Title"
+		"MaxGold"					"1200"
+		"BagCount"					"55"
+		"BagVariance"				"30"
+		"FixedXP"					"800"
+		
+		// Stage 1 ================================================
+		"UnitHarrass_1"
+		{			
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_ancient_apparition"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"25"
+			"DontGiveGoal"			"1"
+		}
+		
+		"UnitMelee_1"
+		{
+			"NPCName"				"npc_dota_creature_snow_creep_melee"
+			"TotalUnitsToSpawn"		"12"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"15"
+		}
+		
+		"UnitAreaEffect_1"
+		{
+			"GroupWithUnit"			"UnitMelee_1"
+			
+			"NPCName"				"npc_dota_creature_minor_lich"
+			"TotalUnitsToSpawn"		"3"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		// Stage 2 ================================================
+		"UnitMelee_2"
+		{
+			"WaitForUnit"			"UnitMelee_1"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_snow_creep_melee"
+			"TotalUnitsToSpawn"		"15"
+			"UnitsPerSpawn"			"5"
+			"SpawnInterval"			"12"
+		}
+		
+		// Stage 3 ================================================
+		"UnitMelee_3a"
+		{
+			"WaitForUnit"			"UnitMelee_2"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_snow_creep_melee"
+			"TotalUnitsToSpawn"		"6"
+			"UnitsPerSpawn"			"2"
+			"SpawnInterval"			"30"
+			
+			"SpawnerName"			"spawner1"
+			"Waypoint"				"path_invader1_1"
+		}
+		
+		"UnitAreaEffect_3a"
+		{
+			"GroupWithUnit"			"UnitMelee_3a"
+			
+			"NPCName"				"npc_dota_creature_minor_lich"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitMelee_3b"
+		{
+			"WaitForUnit"			"UnitMelee_2"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_snow_creep_melee"
+			"TotalUnitsToSpawn"		"8"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"30"
+			
+			"SpawnerName"			"spawner2"
+			"Waypoint"				"path_invader2_1"
+		}
+		
+		"UnitAreaEffect_3b"
+		{
+			"GroupWithUnit"			"UnitMelee_3b"
+			
+			"NPCName"				"npc_dota_creature_minor_lich"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitMelee_3c"
+		{
+			"WaitForUnit"			"UnitMelee_2"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_snow_creep_melee"
+			"TotalUnitsToSpawn"		"8"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"30"
+			
+			"SpawnerName"			"spawner3"
+			"Waypoint"				"path_invader3_1"
+		}
+		
+		"UnitAreaEffect_3c"
+		{
+			"GroupWithUnit"			"UnitMelee_3c"
+			
+			"NPCName"				"npc_dota_creature_minor_lich"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+		
+		"UnitMelee_3d"
+		{
+			"WaitForUnit"			"UnitMelee_2"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_creature_snow_creep_melee"
+			"TotalUnitsToSpawn"		"8"
+			"UnitsPerSpawn"			"4"
+			"SpawnInterval"			"30"
+			
+			"SpawnerName"			"spawner4"
+			"Waypoint"				"path_invader4_1"
+		}
+		
+		"UnitAreaEffect_3d"
+		{
+			"GroupWithUnit"			"UnitMelee_3d"
+			
+			"NPCName"				"npc_dota_creature_minor_lich"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+		}
+	}	
+
+	// ========================================
+	// SECTION 11 (56 -> 60)
+	// ========================================
+	// SPLIT PERSONALITY
+	// ========================================
+
+	//=================================================================================================================
+	// ROUND 56
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round56" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 57
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round57" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+
+	}
+
+	//=================================================================================================================
+	// ROUND 58
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round58" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+	
+	//=================================================================================================================
+	// ROUND 59
+	//=================================================================================================================
+
+	//  CONVENTION:
+	//  "MaxGold" - How much gold each player gets in the bags.
+	//	"FixedXP" - Max xp per round for players
+
+	
+	"Round59" // TEMP
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title"
+		"MaxGold"					"300"
+		"BagCount"					"20"
+		"BagVariance"				"10"
+		"FixedXP"					"400"
+		
+		"UnitFodder_1b" 
+		{
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"1"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"10"	
+		}
+	}
+
+	//=================================================================================================================
+	// ROUND 60 BOSS
+	//=================================================================================================================
+	
+	"Round60" // Splitters
+	{
+		"round_quest_title"			"#DOTA_Holdout_Round_Splitter_Quest_Title"
+		"round_title"				"#DOTA_Holdout_Round_Splitter_Title"
+		"MaxGold"					"1000"
+		"BagCount"					"15"
+		"BagVariance"				"40"
+		"FixedXP"					"1000"
+
+		// Stage 1 ================================================
+		"UnitSplitter_1"
+		{
+			"NPCName"				"npc_dota_splitter_a"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"25"
+		}
+		
+		// Stage 2 ================================================
+		"UnitSplitterSmall_2a"
+		{
+			"WaitForUnit"			"UnitSplitter_1"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_splitter_a"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"15"
+		}
+		
+		"UnitSplitterSmall_2b"
+		{
+			"WaitForUnit"			"UnitSplitter_1"
+			"WaitForTime"			"15"
+			
+			"NPCName"				"npc_dota_splitter_a"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"15"
+		}
+		
+		// Stage 3 ================================================
+		"UnitSplitter_3a"
+		{
+			"WaitForUnit"			"UnitSplitterSmall_2a"
+			"WaitForTime"			"20"
+			
+			"NPCName"				"npc_dota_splitter_a"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"20"
+		}
+		
+		"UnitSplitter_3b"
+		{
+			"WaitForUnit"			"UnitSplitterSmall_2a"
+			"WaitForTime"			"30"
+			
+			"NPCName"				"npc_dota_splitter_a"
+			"TotalUnitsToSpawn"		"2"
+			"UnitsPerSpawn"			"1"
+			"SpawnInterval"			"20"
+		}
+	}
+
+}

@@ -1,0 +1,7 @@
+"AddonInfo"
+{
+	"last_stand_singlelane"
+	{
+		"MaxPlayers"		"6"
+	}
+}

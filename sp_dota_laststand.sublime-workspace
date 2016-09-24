@@ -1,0 +1,670 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"round",
+				"roundnumber"
+			],
+			[
+				"GetX",
+				"GetDeathXP	Get the XP bounty on this unit"
+			],
+			[
+				"ent",
+				"entUnit"
+			],
+			[
+				"spawned",
+				"spawnedUnit"
+			],
+			[
+				"spaned",
+				"spawnedUnit"
+			],
+			[
+				"Round",
+				"roundNumber"
+			],
+			[
+				"Get",
+				"GetTableValue"
+			],
+			[
+				"SetFog",
+				"SetFogOfWarDisabled	Turn the fog of war on or off."
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "scripts/npc/npc_abilities.txt",
+			"settings":
+			{
+				"buffer_size": 241460,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/npc/npc_abilities_custom.txt",
+			"settings":
+			{
+				"buffer_size": 258905,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/npc/npc_items_custom.txt",
+			"settings":
+			{
+				"buffer_size": 88304,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/npc/items.txt",
+			"settings":
+			{
+				"buffer_size": 384750,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/npc/npc_heroes_custom.txt",
+			"settings":
+			{
+				"buffer_size": 13726,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/maps/last_stand_singlelane.txt",
+			"settings":
+			{
+				"buffer_size": 80525,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resource/addon_english.txt",
+			"settings":
+			{
+				"buffer_size": 93855,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/npc/npc_units.txt",
+			"settings":
+			{
+				"buffer_size": 773307,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/npc/npc_units_custom.txt",
+			"settings":
+			{
+				"buffer_size": 255378,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"lua",
+				"Set Syntax: Lua Dota"
+			],
+			[
+				"",
+				"Set Syntax: Shell Script (Bash)"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/herolist.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_heroes_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/addon_game_mode.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/holdout_game_round.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/holdout_game_spawner.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_abilities_override.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/shops/last_stand_singlelane_shops.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_items_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/items.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/items.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_abilities.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_units.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_units_override.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/resource/addon_english.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_abilities_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/styles/custom_game/laststand_game_info.css",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/laststand_game_info.xml",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_scoreboard.js",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/overthrow_scoreboard_left.xml",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/overthrow_game_info.xml",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/styles/custom_game/overthrow_scoreboard.css",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_notification.js",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_scoreboard_team_overlay.js",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/custom_net_tables.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/custom_events.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/maps/last_stand_singlelane.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_units_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/resource/dota_english.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/shops/last_stand_shops.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/maps/last_stand.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/holdout_example/scripts/npc/npc_units_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/ai_core.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/maps/holdout_example_unmodified.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/addoninfo.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/sp_dota_laststand.sublime-project"
+	],
+	"find":
+	{
+		"height": 47.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"punga",
+			"punk",
+			"never",
+			"troll",
+			"shaman",
+			"npc_dota_venomancer_plagueward",
+			"ward",
+			"ReadConfiguration",
+			"\"AbilityCastAnimation\"		",
+			"punk",
+			"castanimation",
+			"small",
+			"undying_decay",
+			"gametime",
+			"precache",
+			"precashe",
+			"_vLootItemDropsList",
+			"ogre",
+			"agility",
+			"LaunchLoot",
+			"spawnPoint",
+			"RandomVector",
+			"LaunchLoot",
+			"loot",
+			"round",
+			"tome",
+			"picker",
+			"modifier_arcane_gaiters",
+			"2051",
+			"ItemDisplayCharges",
+			"loot",
+			"urn_of",
+			"urn",
+			"item",
+			"nChance",
+			"lootItemDrops",
+			"loot",
+			"newItem",
+			"loot",
+			"sell",
+			"urn",
+			"wand",
+			"stick",
+			"bottle",
+			"stick",
+			"wand",
+			"hero",
+			"givegoal",
+			"considered",
+			"hero",
+			"consideredhero",
+			"hero",
+			"SpawnEntityFromTableSynchronous",
+			"entquest",
+			"invader",
+			"_entPrepTimeQuest",
+			"zombie",
+			"\"0\"",
+			"\"bountyXP\"				\"0\"",
+			"\"bountyXP\"	\"0\"",
+			"\"bountyXP\" \"0\"",
+			"trea",
+			"zombie",
+			"OnNPCSpawned",
+			"TeamName",
+			"ogre",
+			"creep",
+			"champion",
+			"creature",
+			"hpgain",
+			"npc_dota_creature",
+			"creature",
+			"30",
+			"0.3",
+			"`",
+			"npc_dota_creature_basic_zombie_exploding",
+			"90",
+			"1100",
+			"DAMAGE_TYPE_COMP",
+			"npc_dota_creature_basic_zombie_exploding",
+			"phantom",
+			"item_broadsword",
+			"healing",
+			"troll",
+			"corpse",
+			"raise",
+			"ghost",
+			"troll",
+			"gold_ba",
+			"beefy",
+			"npc_dota_dark_troll_warlord_skeleton_warrior",
+			"RoundInfo",
+			"AlertTimer",
+			"_entQuest",
+			"show_progress_bar",
+			"subquest_base",
+			"_szRoundQuestTitle",
+			"round_quest_title",
+			"_entQuest",
+			"kobold",
+			"techies",
+			"goblin",
+			"creep",
+			"skelet",
+			"queen",
+			"brood",
+			"Kunkka",
+			"idiot",
+			"phase_boots",
+			"phase",
+			"phase_boot",
+			"mega",
+			"phase_",
+			"movement",
+			"Legacy",
+			"item_datadriven",
+			"_szNPCClassName",
+			"_DoSpawn",
+			"_nChampionLevel",
+			"tick_rate",
+			"var_type",
+			"item",
+			"items",
+			"_shops",
+			"GetMapName()",
+			"holdout",
+			"item_helm_of_the_dominator",
+			"shop"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"strength",
+			"ability",
+			"hero",
+			"npc_creature_small_skeleton",
+			"RoundInfoBegin"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "scripts/npc/npc_abilities.txt",
+					"settings":
+					{
+						"buffer_size": 241460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49187,
+								49190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 20943.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "scripts/npc/npc_abilities_custom.txt",
+					"settings":
+					{
+						"buffer_size": 258905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								170534,
+								170534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4433.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scripts/npc/npc_items_custom.txt",
+					"settings":
+					{
+						"buffer_size": 88304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1352,
+								1352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1599.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "scripts/npc/items.txt",
+					"settings":
+					{
+						"buffer_size": 384750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334483,
+								334499
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1183.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "scripts/npc/npc_heroes_custom.txt",
+					"settings":
+					{
+						"buffer_size": 13726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3071,
+								3071
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1235.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "scripts/maps/last_stand_singlelane.txt",
+					"settings":
+					{
+						"buffer_size": 80525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22573,
+								22573
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3913.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "resource/addon_english.txt",
+					"settings":
+					{
+						"buffer_size": 93855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8833,
+								8833
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1599.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "scripts/npc/npc_units.txt",
+					"settings":
+					{
+						"buffer_size": 773307,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336852,
+								336852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 106795.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "scripts/npc/npc_units_custom.txt",
+					"settings":
+					{
+						"buffer_size": 255378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								87069,
+								87069
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 30433.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.487847222224,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true
+}

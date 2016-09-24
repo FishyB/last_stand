@@ -1,0 +1,29 @@
+//
+// <key>	<value>
+// Hero		currently on/off, will be # of instances (-1 = infinite)
+//
+
+"CustomHeroList"
+{
+	"npc_dota_hero_sniper"				"-1"
+	"npc_dota_hero_gyrocopter"			"-1"
+	"npc_dota_hero_shredder"			"-1"
+	"npc_dota_hero_lich"				"-1"
+	"npc_dota_hero_kunkka"				"-1"
+	"npc_dota_hero_jakiro"				"-1"
+	"npc_dota_hero_phantom_assassin"	"-1"
+	"npc_dota_hero_undying"				"-1"
+	"npc_dota_hero_drow_ranger"			"-1"
+	"npc_dota_hero_sven"				"-1"
+	"npc_dota_hero_axe"					"-1"
+	"npc_dota_hero_witch_doctor"		"-1"
+	"npc_dota_hero_lion"				"-1"
+	"npc_dota_hero_phantom_lancer"		"-1"
+	"npc_dota_hero_lina"				"-1"
+	"npc_dota_hero_juggernaut"			"-1"
+	"npc_dota_hero_earthshaker"			"-1"
+	"npc_dota_hero_skeleton_king"		"-1"
+	"npc_dota_hero_crystal_maiden"		"-1"
+	"npc_dota_hero_riki"				"-1"
+	"npc_dota_hero_venomancer"			"-1"
+}

@@ -1,0 +1,615 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"b",
+				"bolder"
+			],
+			[
+				"round",
+				"roundnumber"
+			],
+			[
+				"GetX",
+				"GetDeathXP	Get the XP bounty on this unit"
+			],
+			[
+				"ent",
+				"entUnit"
+			],
+			[
+				"spawned",
+				"spawnedUnit"
+			],
+			[
+				"spaned",
+				"spawnedUnit"
+			],
+			[
+				"Round",
+				"roundNumber"
+			],
+			[
+				"Get",
+				"GetTableValue"
+			],
+			[
+				"SetFog",
+				"SetFogOfWarDisabled	Turn the fog of war on or off."
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "resource/addon_english.txt",
+			"settings":
+			{
+				"buffer_size": 89905,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/custom_ui_manifest.xml",
+			"settings":
+			{
+				"buffer_size": 4641,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_notification.js",
+			"settings":
+			{
+				"buffer_size": 8257,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_scoreboard.js",
+			"settings":
+			{
+				"buffer_size": 2242,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/vscripts/addon_game_mode.lua",
+			"settings":
+			{
+				"buffer_size": 24604,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/vscripts/holdout_game_round.lua",
+			"settings":
+			{
+				"buffer_size": 20217,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/laststand_round_badge.xml",
+			"settings":
+			{
+				"buffer_size": 480,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/styles/custom_game/overthrow_scoreboard.css",
+			"settings":
+			{
+				"buffer_size": 3416,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"lua",
+				"Set Syntax: Lua Dota"
+			],
+			[
+				"",
+				"Set Syntax: Shell Script (Bash)"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/styles/custom_game/laststand_game_info.css",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/styles/custom_game/laststand_round_notification.css",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/laststand_round_start_info.xml",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/styles/custom_game/overthrow_item_notification.css",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/laststand_game_info.xml",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/overthrow_item_notification.xml",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/holdout_game_spawner.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/addon_game_mode.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/maps/last_stand_singlelane.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_units.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_units_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_abilities_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_abilities.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_items_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_heroes_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_units_override.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/herolist.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/npc_abilities_override.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/npc/items.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/resource/addon_english.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_scoreboard.js",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/overthrow_scoreboard_left.xml",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/overthrow_game_info.xml",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/styles/custom_game/overthrow_scoreboard.css",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_notification.js",
+		"/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_scoreboard_team_overlay.js",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/custom_net_tables.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/custom_events.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/resource/dota_english.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/holdout_game_round.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/shops/last_stand_shops.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/maps/last_stand.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/holdout_example/scripts/npc/npc_units_custom.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/vscripts/ai_core.lua",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/scripts/maps/holdout_example_unmodified.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/addoninfo.txt",
+		"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/sp_dota_laststand.sublime-project"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Precache",
+			"entQuest",
+			"_entQuest",
+			"spawner",
+			"_nCoreUnitsTotal",
+			"_nCoreUnitsKilled",
+			"event",
+			"enemies",
+			"enemiesRemaining",
+			"event",
+			"vertical",
+			"zombie",
+			"\"0\"",
+			"\"bountyXP\"				\"0\"",
+			"\"bountyXP\"	\"0\"",
+			"\"bountyXP\" \"0\"",
+			"trea",
+			"zombie",
+			"OnNPCSpawned",
+			"TeamName",
+			"ogre",
+			"creep",
+			"champion",
+			"creature",
+			"hpgain",
+			"npc_dota_creature",
+			"creature",
+			"30",
+			"0.3",
+			"`",
+			"npc_dota_creature_basic_zombie_exploding",
+			"90",
+			"1100",
+			"DAMAGE_TYPE_COMP",
+			"npc_dota_creature_basic_zombie_exploding",
+			"phantom",
+			"item_broadsword",
+			"healing",
+			"troll",
+			"corpse",
+			"raise",
+			"ghost",
+			"troll",
+			"gold_ba",
+			"beefy",
+			"npc_dota_dark_troll_warlord_skeleton_warrior",
+			"RoundInfo",
+			"AlertTimer",
+			"_entQuest",
+			"show_progress_bar",
+			"subquest_base",
+			"_szRoundQuestTitle",
+			"round_quest_title",
+			"_entQuest",
+			"kobold",
+			"techies",
+			"goblin",
+			"creep",
+			"skelet",
+			"queen",
+			"brood",
+			"Kunkka",
+			"idiot",
+			"phase_boots",
+			"phase",
+			"phase_boot",
+			"mega",
+			"phase_",
+			"movement",
+			"Legacy",
+			"item_datadriven",
+			"_szNPCClassName",
+			"_DoSpawn",
+			"_nChampionLevel",
+			"tick_rate",
+			"var_type",
+			"item",
+			"items",
+			"_shops",
+			"GetMapName()",
+			"holdout",
+			"item_helm_of_the_dominator",
+			"shop",
+			"{\n",
+			"mapname",
+			"shop",
+			"example",
+			"example_holdout",
+			"example",
+			"holdout_multishot",
+			"item_helm_of_the_dominator",
+			"modifier_hotd",
+			"holdout_example",
+			"Entities",
+			"_entAncient",
+			"boot"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"npc_creature_small_skeleton",
+			"RoundInfoBegin"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "resource/addon_english.txt",
+					"settings":
+					{
+						"buffer_size": 89905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11478,
+								11478
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2379.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/custom_ui_manifest.xml",
+					"settings":
+					{
+						"buffer_size": 4641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3985,
+								4011
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_notification.js",
+					"settings":
+					{
+						"buffer_size": 8257,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7724,
+								7740
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2852.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/scripts/custom_game/laststand_scoreboard.js",
+					"settings":
+					{
+						"buffer_size": 2242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1202,
+								1202
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 775.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "scripts/vscripts/addon_game_mode.lua",
+					"settings":
+					{
+						"buffer_size": 24604,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14200,
+								14200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua Dota/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4778.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "scripts/vscripts/holdout_game_round.lua",
+					"settings":
+					{
+						"buffer_size": 20217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3240,
+								3240
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua Dota/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 733.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/layout/custom_game/laststand_round_badge.xml",
+					"settings":
+					{
+						"buffer_size": 480,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								377,
+								377
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/D/Steam/SteamApps/common/dota 2 beta/content/dota_addons/last_stand/panorama/styles/custom_game/overthrow_scoreboard.css",
+					"settings":
+					{
+						"buffer_size": 3416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1143,
+								1143
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.427006502287,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/D/Steam/SteamApps/common/dota 2 beta/game/dota_addons/last_stand/sp_dota_laststand.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,8 @@
+last_stand_singlelane
+{
+	material materials/overviews/last_stand_singlelane.vmat
+	pos_x -5568
+	pos_y 4224
+	scale 10.125
+}
+

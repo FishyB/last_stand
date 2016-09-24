@@ -1,0 +1,8 @@
+last_stand
+{
+	material materials/overviews/last_stand.vmat
+	pos_x -4384
+	pos_y 3464
+	scale 8.383
+}
+
