@@ -417,6 +417,48 @@
 		}
 	}
 
+	//=================================================================================================================
+	// Faerie fire
+	//=================================================================================================================
+
+	 "item_faerie_fire"
+	 {
+	      "ID" 								"237"
+	      "AbilityBehavior" 				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	      "AbilityUnitTargetTeam" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	      "AbilityUnitTargetType" 			"DOTA_UNIT_TARGET_HERO"
+	      "AbilityCastPoint" 				"0.0"
+	      "AbilityCooldown" 				"5.0"
+
+	      "ItemCost" 						"75"
+	      "ItemShopTags"					"armor"
+	      "ItemQuality"						"consumable"
+	      "ItemAliases"						"faerie fire"
+	      "SideShop"						"0"
+	      "ItemStackable"					"0"
+	      "ItemPermanent"					"0"
+	      "ItemInitialCharges"				"1"
+	      "ItemHideCharges"					"1"
+
+	      "UIPickupSound"					"Item.PickUpRingShop"
+	      "UIDropSound"						"Item.DropRingShop"
+	      "WorldDropSound"					"Item.DropRingWorld"
+
+	      "AbilitySpecial"
+	      {
+	      		"01"
+		        {
+		        	"var_type"				"FIELD_INTEGER"
+		         	"bonus_damage"			"2"
+		        }
+		        "02"
+		        {
+		       		"var_type"				"FIELD_INTEGER"
+		          	"hp_restore"			"75"
+		        }
+	      }
+    }
+
 
 	//=================================================================================================================
 	// Ring of Protection

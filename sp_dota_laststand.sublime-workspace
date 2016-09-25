@@ -59,7 +59,7 @@
 			"file": "scripts/npc/npc_items_custom.txt",
 			"settings":
 			{
-				"buffer_size": 88304,
+				"buffer_size": 88355,
 				"line_ending": "Windows"
 			}
 		},
@@ -67,7 +67,7 @@
 			"file": "scripts/npc/items.txt",
 			"settings":
 			{
-				"buffer_size": 384750,
+				"buffer_size": 386065,
 				"line_ending": "Windows"
 			}
 		},
@@ -80,18 +80,18 @@
 			}
 		},
 		{
-			"file": "scripts/maps/last_stand_singlelane.txt",
+			"file": "scripts/npc/npc_units_custom.txt",
 			"settings":
 			{
-				"buffer_size": 80525,
+				"buffer_size": 255378,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "resource/addon_english.txt",
+			"file": "scripts/maps/last_stand_singlelane.txt",
 			"settings":
 			{
-				"buffer_size": 93855,
+				"buffer_size": 80774,
 				"line_ending": "Windows"
 			}
 		},
@@ -104,10 +104,18 @@
 			}
 		},
 		{
-			"file": "scripts/npc/npc_units_custom.txt",
+			"file": "resource/addon_english.txt",
 			"settings":
 			{
-				"buffer_size": 255378,
+				"buffer_size": 99378,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/vscripts/addon_game_mode.lua",
+			"settings":
+			{
+				"buffer_size": 25167,
 				"line_ending": "Windows"
 			}
 		}
@@ -182,7 +190,7 @@
 	],
 	"find":
 	{
-		"height": 47.0
+		"height": 53.0
 	},
 	"find_in_files":
 	{
@@ -197,6 +205,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}",
+			"last stand",
+			"}",
+			"\"\"",
+			"kobold",
+			"0",
+			"{\n",
+			"dispatc",
+			"{\n",
+			"manta",
+			"tome",
 			"punga",
 			"punk",
 			"never",
@@ -313,18 +332,7 @@
 			"movement",
 			"Legacy",
 			"item_datadriven",
-			"_szNPCClassName",
-			"_DoSpawn",
-			"_nChampionLevel",
-			"tick_rate",
-			"var_type",
-			"item",
-			"items",
-			"_shops",
-			"GetMapName()",
-			"holdout",
-			"item_helm_of_the_dominator",
-			"shop"
+			"_szNPCClassName"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -347,7 +355,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -362,8 +370,8 @@
 						"selection":
 						[
 							[
-								49187,
-								49190
+								50571,
+								50571
 							]
 						],
 						"settings":
@@ -372,7 +380,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 20943.0,
+						"translation.y": 20501.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -399,7 +407,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4433.0,
+						"translation.y": 182.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -409,15 +417,15 @@
 					"file": "scripts/npc/npc_items_custom.txt",
 					"settings":
 					{
-						"buffer_size": 88304,
+						"buffer_size": 88355,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1352,
-								1352
+								78896,
+								78893
 							]
 						],
 						"settings":
@@ -426,7 +434,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1599.0,
+						"translation.y": 38187.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -436,15 +444,15 @@
 					"file": "scripts/npc/items.txt",
 					"settings":
 					{
-						"buffer_size": 384750,
+						"buffer_size": 386065,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								334483,
-								334499
+								240161,
+								240166
 							]
 						],
 						"settings":
@@ -453,7 +461,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1183.0,
+						"translation.y": 110877.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -470,8 +478,8 @@
 						"selection":
 						[
 							[
-								3071,
-								3071
+								4208,
+								4209
 							]
 						],
 						"settings":
@@ -480,7 +488,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1235.0,
+						"translation.y": 1001.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "scripts/npc/npc_units_custom.txt",
+					"settings":
+					{
+						"buffer_size": 255378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49287,
+								49287
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 18816.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -488,23 +523,23 @@
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "scripts/maps/last_stand_singlelane.txt",
 					"settings":
 					{
-						"buffer_size": 80525,
+						"buffer_size": 80774,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22573,
-								22573
+								15869,
+								15869
 							]
 						],
 						"settings":
@@ -513,34 +548,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3913.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "resource/addon_english.txt",
-					"settings":
-					{
-						"buffer_size": 93855,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8833,
-								8833
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1599.0,
+						"translation.y": 8138.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -557,8 +565,8 @@
 						"selection":
 						[
 							[
-								336852,
-								336852
+								244538,
+								244538
 							]
 						],
 						"settings":
@@ -567,34 +575,62 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 106795.0,
+						"translation.y": 76147.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "scripts/npc/npc_units_custom.txt",
+					"file": "resource/addon_english.txt",
 					"settings":
 					{
-						"buffer_size": 255378,
+						"buffer_size": 99378,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								87069,
-								87069
+								11873,
+								11873
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2790.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "scripts/vscripts/addon_game_mode.lua",
+					"settings":
+					{
+						"buffer_size": 25167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2261,
+								2261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua Dota/Lua.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 30433.0,
+						"translation.y": 3825.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -630,7 +666,7 @@
 		"cols":
 		[
 			0.0,
-			0.487847222224,
+			0.494791666667,
 			1.0
 		],
 		"rows":

@@ -403,7 +403,7 @@
 		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Info4"
 		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title4"
 		"MaxGold"					"600"
-		"BagCount"					"20"
+		"BagCount"					"40"
 		"BagVariance"				"10"
 		"FixedXP"					"700"
 		
@@ -458,10 +458,10 @@
 	{
 		"round_quest_title"			"#DOTA_Holdout_Round_Kobolds_Info5"
 		"round_title"				"#DOTA_Holdout_Round_Kobolds_Title5"
-		"MaxGold"					"300"
+		"MaxGold"					"1000"
 		"BagCount"					"10"
 		"BagVariance"				"10"
-		"FixedXP"					"800"
+		"FixedXP"					"1400"
 		
 		// Stage 1 ================================================
 		
@@ -505,9 +505,9 @@
 	{
 		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info1"
 		"round_title"				"#DOTA_Holdout_Round_Spooky_Title1"
-		"MaxGold"					"300"
-		"BagCount"					"20"
-		"BagVariance"				"10"
+		"MaxGold"					"500"
+		"BagCount"					"60"
+		"BagVariance"				"5"
 		"FixedXP"					"900"
 	
 		"UnitSkellyton_1a" 
@@ -565,7 +565,7 @@
 	{
 		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info2"
 		"round_title"				"#DOTA_Holdout_Round_Spooky_Title2"
-		"MaxGold"					"300"
+		"MaxGold"					"500"
 		"BagCount"					"10"
 		"BagVariance"				"10"
 		"FixedXP"					"1000"
@@ -620,38 +620,52 @@
 	{
 		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info3"
 		"round_title"				"#DOTA_Holdout_Round_Spooky_Title3"
-		"MaxGold"					"300"
-		"BagCount"					"20"
-		"BagVariance"				"10"
+		"MaxGold"					"600"
+		"BagCount"					"10"
+		"BagVariance"				"2"
 		"FixedXP"					"1100"
 		
-		"UnitSkellyton_1a" 
+
+
+		"UnitPunkna_1" 
 		{
-			"NPCName"				"npc_creature_small_skeleton"
-			"TotalUnitsToSpawn"		"48"  	
-			"UnitsPerSpawn"			"4" 	
-			"SpawnInterval"			"10"	
-		}
-
-		"UnitFodder_1a" 
-		{
-			
-
-			"NPCName"				"npc_dota_creature_dark_troll_warlord"
-			"TotalUnitsToSpawn"		"36"  	
-			"UnitsPerSpawn"			"6" 	
-			"SpawnInterval"			"20"	
-		}
-
-		"UnitFodder_2a" 
-		{
-			"GroupWithUnit"			"UnitFodder_1a"
-
 			"NPCName"				"npc_dota_creature_punkna"
 			"TotalUnitsToSpawn"		"6"  	
-			"UnitsPerSpawn"			"1" 	
-			"SpawnInterval"			"20"	
+			"UnitsPerSpawn"			"1" 
+			"SpawnInterval"			"20"			
 		}
+
+		"UnitSkellyton_1" 
+		{
+			"GroupWithUnit"			"UnitPunkna_1"
+
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"48"  	
+			"UnitsPerSpawn"			"8" 	
+		}
+
+		// Stage 2 ================================================
+
+		"UnitPunkna_2" 
+		{
+			"WaitForUnit"			"UnitPunkna_1"
+			"WaitForTime"			"30"
+
+			"NPCName"				"npc_dota_creature_punkna"
+			"TotalUnitsToSpawn"		"2"  	
+			"UnitsPerSpawn"			"1" 	
+			"SpawnInterval"			"2"	
+		}
+
+		"UnitSkellyton_2" 
+		{
+			"GroupWithUnit"			"UnitPunkna_2"
+
+			"NPCName"				"npc_creature_small_skeleton"
+			"TotalUnitsToSpawn"		"24"  	
+			"UnitsPerSpawn"			"12" 	
+		}
+
 
 	}
 
@@ -668,10 +682,10 @@
 {
 		"round_quest_title"			"#DOTA_Holdout_Round_Spooky_Info4"
 		"round_title"				"#DOTA_Holdout_Round_Spooky_Title4"
-		"MaxGold"					"300"
-		"BagCount"					"40"
+		"MaxGold"					"500"
+		"BagCount"					"50"
 		"BagVariance"				"10"
-		"FixedXP"					"1300"
+		"FixedXP"					"1200"
 		
 		// Stage 1 ================================================
 		"UnitZombie_1a"
@@ -922,7 +936,7 @@
 		"MaxGold"					"300"
 		"BagCount"					"20"
 		"BagVariance"				"0"
-		"FixedXP"					"1300"
+		"FixedXP"					"2600"
 		
 		"UnitFriendlets_1a" 
 		{

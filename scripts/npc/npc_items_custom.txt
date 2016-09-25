@@ -2368,7 +2368,7 @@
 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"10.0"
+		"AbilityCooldown"				"16.0"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2410,7 +2410,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"phase_duration"		"2.0"
+				"phase_duration"		"4.0"
 			}
 		}
 	}
@@ -2606,7 +2606,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"25"
+				"bonus_damage"			"60"
 			}
 			"02"
 			{
@@ -2651,7 +2651,7 @@
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"minus_armor"			"-8"
+				"minus_armor"			"-12"
 			}
 			"11"
 			{
@@ -2675,7 +2675,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"	
+		"ItemCost"						"1200"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -2684,7 +2684,7 @@
 		"ItemResult"					"item_manta2"
 		"ItemRequirements"
 		{
-			"01"						"item_manta;item_wraith_band;"
+			"01"						"item_manta;"
 		}
 	}
 	
@@ -2721,98 +2721,98 @@
 		{
 			"01"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"13"
+				"var_type"							"FIELD_INTEGER"
+				"bonus_strength"					"13"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"32"
+				"var_type"							"FIELD_INTEGER"
+				"bonus_agility"						"32"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"13"
+				"var_type"							"FIELD_INTEGER"
+				"bonus_intellect"					"13"
 			}
 			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"20"
+			{		
+				"var_type"							"FIELD_INTEGER"
+				"bonus_attack_speed"				"20"
 			}
 			"05"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"	"10"
+				"var_type"							"FIELD_INTEGER"
+				"bonus_movement_speed"				"10"
 			}
 			"06"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"images_count"			"3"
+				"var_type"							"FIELD_INTEGER"
+				"images_count"						"4"
 			}			
 			"07"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"							"FIELD_INTEGER"
 				"tooltip_illusion_duration"			"25"
 			}
 			"08"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"							"FIELD_INTEGER"
 				"images_do_damage_percent_melee"	"-62"
 			}
 			"09"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"tooltip_damage_outgoing_melee"			"38"
+				"var_type"							"FIELD_INTEGER"
+				"tooltip_damage_outgoing_melee"		"38"
 			}	
 			"10"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"							"FIELD_INTEGER"
 				"images_take_damage_percent_melee"	"230"
 			}
 			"11"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"							"FIELD_INTEGER"
 				"tooltip_damage_incoming_melee_total_pct"			"330"
 			}			
 			"12"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"							"FIELD_INTEGER"
 				"images_do_damage_percent_ranged"	"-67"
 			}
 			"13"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"tooltip_damage_outgoing_ranged"			"33"
+				"var_type"							"FIELD_INTEGER"
+				"tooltip_damage_outgoing_ranged"	"33"
 			}
 			"14"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"							"FIELD_INTEGER"
 				"images_take_damage_percent_ranged"	"280"
 			}
 			"15"
 			{
-				"var_type"				"FIELD_INTEGER"
+				"var_type"							"FIELD_INTEGER"
 				"tooltip_damage_incoming_ranged_total_pct"			"380"
 			}
 			"16"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"cooldown_melee"		"30"
+				"var_type"							"FIELD_INTEGER"
+				"cooldown_melee"					"30"
 			}
 			"17"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"cooldown_ranged_tooltip"		"45"
+				"var_type"							"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"			"45"
 			}
 			"18"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"invuln_duration"		"0.1"
+				"var_type"							"FIELD_FLOAT"
+				"invuln_duration"					"0.1"
 			}
 			"19"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"vision_radius"			"1000"
+				"var_type"							"FIELD_INTEGER"
+				"vision_radius"						"1000"
 			}			
 		}
 	}
@@ -2831,7 +2831,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1200"	
+		"ItemCost"						"2200"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -2840,7 +2840,7 @@
 		"ItemResult"					"item_manta3"
 		"ItemRequirements"
 		{
-			"01"						"item_manta2;item_wraith_band"
+			"01"						"item_manta2"
 		}
 	}
 	
@@ -2898,12 +2898,12 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"	"10"
+				"bonus_movement_speed"	"20"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"images_count"			"4"
+				"images_count"			"6"
 			}			
 			"07"
 			{
