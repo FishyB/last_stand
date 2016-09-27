@@ -89,6 +89,13 @@ function CHoldoutGameMode:InitGameMode()
 	print (string.format( "GetTeamPlayerCount = %d ", nPlayercount ) )
 	nPlayercount = ( PlayerResource:GetPlayerCountForTeam( DOTA_TEAM_GOODGUYS ) )
 	print (string.format( "GetPlayerCountForTeam (GOODGUYS) = %d ", nPlayercount ) )
+
+	local timeAsString = GetSystemTime()
+	local timeAsStringFormatted = timeAsString:gsub( ":", "" )
+	print (string.format( "System time : %s", timeAsStringFormatted ) )
+
+	math.randomseed( tonumber( timeAsStringFormatted ) )
+	
 	
 	self:_ReadGameConfiguration()
 	
@@ -118,6 +125,9 @@ function CHoldoutGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetRemoveIllusionsOnDeath( true )
 	GameRules:GetGameModeEntity():SetTopBarTeamValuesOverride( true )
 	GameRules:GetGameModeEntity():SetTopBarTeamValuesVisible( false )
+
+	-- Initialize the pseudo random number generator
+	
 	
 xpTable = {
 		0,-- 1
@@ -541,12 +551,13 @@ end
 
 
 function CHoldoutGameMode:CheckForLootItemDrop( killedUnit )
-	for _,itemDropInfo in pairs( self._vLootItemDropsList ) do
+	for _,itemDropInfo in pairs( self._vLootItemDropsList ) do 
+
 		local rVal = (math.random(0,100000))
 		local rVal2 = rVal/1000
-		--print(string.format( "Rolling drop chance( %f ) for %s => Rolled %f / 100 =>  %f ", itemDropInfo.nChance, itemDropInfo.szItemName, rVal, rVal2 ))
+		print(string.format( "Rolling drop chance( %f ) for %s => Rolled %f / 100 =>  %f ", itemDropInfo.nChance, itemDropInfo.szItemName, rVal, rVal2 ))
 		if ( rVal2 <= itemDropInfo.nChance ) then
-			--print( "ROLL SUCCESS!!!")
+			print( "ROLL SUCCESS!!!")
 			local newItem = CreateItem( itemDropInfo.szItemName, nil, nil )
 			newItem:SetPurchaseTime( 0 )
 			if newItem:IsPermanent() and newItem:GetShareability() == ITEM_FULLY_SHAREABLE then

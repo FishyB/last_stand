@@ -17,17 +17,17 @@
 		"HealingSalve1"
 		{
 			"Item"					"item_flask2"
-			"Chance"				"0.8"
+			"Chance"				"0.54"
 		}
 		"HealingSalve2"
 		{
 			"Item"					"item_greater_salve"
-			"Chance"				"0.36"
+			"Chance"				"0.2"
 		}
 		"Clarity2"
 		{
 			"Item"					"item_greater_clarity"
-			"Chance"				"0.6"
+			"Chance"				"0.4"
 		}
 		"Agility3"
 		{
@@ -57,7 +57,7 @@
 		"Strength6"
 		{
 			"Item"					"item_tome_of_strength"
-			"Chance"				"0.09"
+			"Chance"				"0.1"
 		}
 		
 	}

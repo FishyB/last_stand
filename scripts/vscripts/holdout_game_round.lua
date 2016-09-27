@@ -219,6 +219,7 @@ function AutoSetCreatureLevelToRound(unit, roundnumber, players)
 	unit:CreatureLevelUp(roundnumber-1)
 	AutoAdjustUnitMaxHealthToPlayerCount(unit, players)
 	AutoAdjustUnitDamageToPlayerCount(unit, players)
+	AutoAdjustUnitBountyToPlayerCount(unit, players)
 	print ("--------- Finished ------------ \n")
 end
 
@@ -231,6 +232,7 @@ function AutoSetHeroLevelToRound(unit, roundnumber, players)
 	SetHeroCreepDamage(unit, roundnumber)
 	AutoAdjustUnitMaxHealthToPlayerCount(unit, players)
 	AutoAdjustUnitDamageToPlayerCount(unit, players)
+	AutoAdjustUnitBountyToPlayerCount(unit, players)
 	print ("--------- Finished ------------ \n")
 end
 
@@ -315,6 +317,22 @@ function AutoAdjustUnitDamageToPlayerCount(unit, numberofplayers)
 	unit:SetBaseDamageMin(newUnitDam)
 	unit:SetBaseDamageMax(newUnitDam + newUnitDamSpr)
 	print (string.format( "AutoAdjustUnitDamageToPlayerCount:\n Scalar = %g, Base DAM of unit = %d / %d, new Base DAM = %d / %d ", flDamageScalar, baseUnitDam, baseUnitDam + baseUnitDamSpr , newUnitDam, newUnitDam + newUnitDamSpr) )
+
+end
+
+function AutoAdjustUnitBountyToPlayerCount(unit, numberofplayers)
+
+	-- Adjust gold bounty for enemies that have them.
+	-- Single player games have better bounties per player
+	local flBountyScalar = 0.75 + (numberofplayers  * 0.4 )
+	local nOldBounty = unit:GetMaximumGoldBounty()
+	if nOldBounty > 0 then
+		local nNewBounty = math.ceil(nOldBounty * flBountyScalar)
+		unit:SetMinimumGoldBounty(nNewBounty)
+		unit:SetMaximumGoldBounty(nNewBounty)
+		print (string.format( "Scalar = %g, Base Gold of unit = %d, new Gold = %d ", flBountyScalar, nOldBounty, nNewBounty ) )
+	end
+
 
 end
 
@@ -505,12 +523,11 @@ function CHoldoutGameRound:_CheckForGoldBagDrop( killedUnit )
 	
 	-- Adjust gold dropped in a bag by the amount of players in the game 
 	-- May need to remove as this is given to all players so it's self balancing!
-	--[[
 	local nAdjustGoldToDrop = ( nGoldToDrop * (PlayerResource:GetPlayerCountForTeam( DOTA_TEAM_GOODGUYS ) ) )
 	newItem:SetCurrentCharges( math.floor(nAdjustGoldToDrop) )
 	print (string.format( "Gold dropped: Base = %d | Adjusted = %d", nGoldToDrop, nAdjustGoldToDrop ) )
-	]]
-	newItem:SetCurrentCharges( nGoldToDrop )
+	
+	-- newItem:SetCurrentCharges( nGoldToDrop )
 	
 	local drop = CreateItemOnPositionSync( killedUnit:GetAbsOrigin(), newItem )
 	local dropTarget = killedUnit:GetAbsOrigin() + RandomVector( RandomFloat( 50, 350 ) )
