@@ -523,7 +523,8 @@ function CHoldoutGameRound:_CheckForGoldBagDrop( killedUnit )
 	
 	-- Adjust gold dropped in a bag by the amount of players in the game 
 	-- May need to remove as this is given to all players so it's self balancing!
-	local nAdjustGoldToDrop = ( nGoldToDrop * (PlayerResource:GetPlayerCountForTeam( DOTA_TEAM_GOODGUYS ) ) )
+	local nPlayers = PlayerResource:GetPlayerCountForTeam( DOTA_TEAM_GOODGUYS )
+	local nAdjustGoldToDrop = nGoldToDrop + ( nGoldToDrop * ( (nPlayers - 1) * (0.6 - ((nPlayers - 1) * 0.1) ) ) )
 	newItem:SetCurrentCharges( math.floor(nAdjustGoldToDrop) )
 	print (string.format( "Gold dropped: Base = %d | Adjusted = %d", nGoldToDrop, nAdjustGoldToDrop ) )
 	

@@ -47,7 +47,7 @@
 			"file": "scripts/npc/npc_abilities.txt",
 			"settings":
 			{
-				"buffer_size": 241460,
+				"buffer_size": 241482,
 				"line_ending": "Windows"
 			}
 		},
@@ -95,7 +95,7 @@
 			"file": "scripts/maps/last_stand_singlelane.txt",
 			"settings":
 			{
-				"buffer_size": 80773,
+				"buffer_size": 80768,
 				"line_ending": "Windows"
 			}
 		},
@@ -108,10 +108,18 @@
 			}
 		},
 		{
-			"file": "resource/addon_english.txt",
+			"file": "panorama/localization/addon_english.txt",
 			"settings":
 			{
 				"buffer_size": 99378,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resource/addon_english.txt",
+			"settings":
+			{
+				"buffer_size": 99377,
 				"line_ending": "Windows"
 			}
 		},
@@ -127,7 +135,7 @@
 			"file": "scripts/vscripts/holdout_game_round.lua",
 			"settings":
 			{
-				"buffer_size": 20889,
+				"buffer_size": 20971,
 				"line_ending": "Windows"
 			}
 		},
@@ -210,7 +218,7 @@
 	],
 	"find":
 	{
-		"height": 54.0
+		"height": 55.0
 	},
 	"find_in_files":
 	{
@@ -225,6 +233,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"crit",
 			"random",
 			"king",
 			"Loot",
@@ -351,8 +360,7 @@
 			"show_progress_bar",
 			"subquest_base",
 			"_szRoundQuestTitle",
-			"round_quest_title",
-			"_entQuest"
+			"round_quest_title"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -375,7 +383,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -383,24 +391,25 @@
 					"file": "scripts/npc/npc_abilities.txt",
 					"settings":
 					{
-						"buffer_size": 241460,
+						"buffer_size": 241482,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								26933,
-								26936
+								191509,
+								191511
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13185.0,
+						"translation.y": 3517.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -471,8 +480,8 @@
 						"selection":
 						[
 							[
-								240161,
-								240166
+								3341,
+								3341
 							]
 						],
 						"settings":
@@ -481,7 +490,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3057.0,
+						"translation.y": 1032.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -543,7 +552,7 @@
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -551,15 +560,15 @@
 					"file": "scripts/maps/last_stand_singlelane.txt",
 					"settings":
 					{
-						"buffer_size": 80773,
+						"buffer_size": 80768,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								896,
-								896
+								816,
+								816
 							]
 						],
 						"settings":
@@ -569,7 +578,7 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -604,7 +613,7 @@
 				},
 				{
 					"buffer": 8,
-					"file": "resource/addon_english.txt",
+					"file": "panorama/localization/addon_english.txt",
 					"settings":
 					{
 						"buffer_size": 99378,
@@ -625,13 +634,40 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2205.0,
+						"translation.y": 1530.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 9,
+					"file": "resource/addon_english.txt",
+					"settings":
+					{
+						"buffer_size": 99377,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20897,
+								20897
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6358.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "scripts/vscripts/addon_game_mode.lua",
 					"settings":
 					{
@@ -652,25 +688,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 7761.0,
+						"translation.y": 9291.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "scripts/vscripts/holdout_game_round.lua",
 					"settings":
 					{
-						"buffer_size": 20889,
+						"buffer_size": 20971,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17540,
-								17544
+								19400,
+								19400
 							]
 						],
 						"settings":
@@ -679,13 +715,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6366.0,
+						"translation.y": 7356.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "scripts/vscripts/holdout_game_spawner.lua",
 					"settings":
 					{
@@ -742,7 +778,7 @@
 		"cols":
 		[
 			0.0,
-			0.507523148148,
+			0.559606481481,
 			1.0
 		],
 		"rows":
